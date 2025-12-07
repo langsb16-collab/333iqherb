@@ -1,20 +1,19 @@
 /* Custom Styles for iqherb */
 
-/* Project Card Styles - White Background with Clear Border */
+/* Project Card Styles - Exact Match to Screenshot */
 .project-card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 2px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid #d1d5db;
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
-  border-color: #a855f7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .project-card-header {
@@ -35,7 +34,7 @@
 }
 
 .project-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: #111827;
   margin-bottom: 8px;
@@ -47,30 +46,30 @@
 }
 
 .project-description {
-  font-size: 12px;
+  font-size: 13px;
   color: #6b7280;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 36px;
+  min-height: 40px;
 }
 
 .project-card-footer {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   align-items: center;
 }
 
-/* Badge Styles - Matching Screenshot Colors */
+/* Badge Styles - Rounded Pills */
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 11px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -81,24 +80,24 @@
 }
 
 .badge-green {
-  background-color: #10b981;
+  background-color: #f97316;
   color: white;
 }
 
 .badge-pink {
-  background-color: #ec4899;
+  background-color: #dc2626;
   color: white;
 }
 
-/* Amount Badge - Yellow/Orange Background */
+/* Amount Badge - Yellow Background */
 .amount-badge {
   display: inline-flex;
   align-items: center;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 20px;
   background-color: #fbbf24;
-  color: #78350f;
-  font-size: 11px;
+  color: #92400e;
+  font-size: 13px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -262,13 +261,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* Smooth Transitions */
-* {
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-}
-
-button, a, .project-card {
-  transition: all 0.3s ease;
 }
