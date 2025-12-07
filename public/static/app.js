@@ -232,15 +232,24 @@ async function loadProjects() {
       const category = translateCategory(project.category || '기타');
       const fundingType = project.funding_type || 'investment';
       
-      // Determine badge icon and text based on funding type
+      // Determine badge class and text based on funding type and language
+      let badgeClass = 'badge-investment';
       let badgeIcon = '🔻';
-      let badgeText = '투자';
+      let badgeText = '';
       
       if (fundingType === 'investment' || fundingType.includes('투자') || fundingType.includes('Investment')) {
-        badgeIcon = '🔻';
-        badgeText = t('type_investment');
+        if (currentLang === 'ko') {
+          badgeClass = 'badge-investment';
+          badgeText = '투자';
+        } else if (currentLang === 'en') {
+          badgeClass = 'badge-orange';
+          badgeText = 'Investment';
+        } else {
+          badgeClass = 'badge-orange';
+          badgeText = t('type_investment');
+        }
       } else if (fundingType === 'donation' || fundingType.includes('수익') || fundingType.includes('Revenue')) {
-        badgeIcon = '🔻';
+        badgeClass = 'badge-donation';
         badgeText = t('type_revenue');
       }
       
@@ -254,7 +263,7 @@ async function loadProjects() {
           <p class="project-description">${description || ''}</p>
         </div>
         <div class="project-card-footer">
-          <span class="badge">${badgeIcon} ${badgeText}</span>
+          <span class="badge ${badgeClass}">${badgeIcon} ${badgeText}</span>
           <span class="amount-badge">$ ${(project.amount || 0).toLocaleString()}</span>
         </div>
       </div>
