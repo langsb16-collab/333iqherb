@@ -292,7 +292,7 @@ async function loadProjects() {
             <span class="amount-badge" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">
               $${(project.amount || 0).toLocaleString()}
             </span>
-            ${videoCount > 0 ? `<span class="badge" style="background:#FF0000; color:white; font-size: 0.75rem; padding: 0.4rem 0.8rem;"><i class="fab fa-youtube mr-1"></i>${videoCount}개 ${t('video_label')}</span>` : ''}
+            ${videoCount > 0 ? `<span class="badge" style="background:#3B82F6; color:white; font-size: 0.75rem; padding: 0.4rem 0.8rem;"><i class="fab fa-youtube mr-1"></i>${videoCount}개 ${t('video_label')}</span>` : ''}
           </div>
         </div>
       </div>

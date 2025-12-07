@@ -173,7 +173,7 @@ app.get('/', (c) => {
             transform: translate(-50%, -50%);
             width: 68px;
             height: 48px;
-            background: rgba(255, 0, 0, 0.8);
+            background: rgba(59, 130, 246, 0.9);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -181,7 +181,7 @@ app.get('/', (c) => {
             transition: all 0.3s;
           }
           .youtube-thumbnail:hover .play-button {
-            background: rgba(255, 0, 0, 1);
+            background: rgba(59, 130, 246, 1);
             transform: translate(-50%, -50%) scale(1.1);
           }
           .youtube-thumbnail .play-button::after {
