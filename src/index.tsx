@@ -261,26 +261,9 @@ app.get('/', (c) => {
             </div>
         </section>
 
-        <footer class="bg-gray-800 text-white py-2 mt-6">
+        <footer class="bg-gray-800 text-white py-1 mt-6">
             <div class="max-w-7xl mx-auto px-2 sm:px-4">
                 <div class="flex flex-col items-center">
-                    <p class="text-xs sm:text-sm font-semibold mb-1.5" data-i18n="footer_title">프로젝트가 자본을 만나는 곳</p>
-                    
-                    <!-- QR Code and Company Info Section -->
-                    <div class="bg-white rounded p-1.5 sm:p-2 mb-1" style="max-width: 280px; width: 85%;">
-                        <div class="flex items-center justify-center gap-1.5 sm:gap-2">
-                            <img src="/static/wechat-qr.png" alt="WeChat QR Code" class="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
-                            <div class="text-center flex-1 min-w-0">
-                                <p class="text-gray-800 font-bold text-[10px] sm:text-xs mb-0.5 leading-tight">延世互联信息技术有限公司</p>
-                                <p class="text-gray-700 text-[10px] sm:text-xs mb-1 leading-tight">연세호련정보기술유한공사</p>
-                                <p class="text-gray-600 text-[9px] sm:text-xs leading-tight">
-                                    <i class="fas fa-phone mr-0.5"></i>
-                                    <span class="font-medium">13943377770</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <p class="text-[9px] sm:text-xs text-gray-400">© 2024 OpenFunding IT Hub. All rights reserved.</p>
                 </div>
             </div>
