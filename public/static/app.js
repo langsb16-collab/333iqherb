@@ -197,9 +197,9 @@ function translateFundingType(type) {
 
 function translateCategory(category) {
   const categoryMap = {
-    'ko': { '선택': '선택', '웹플랫폼': '웹플랫폼', 'O2O': 'O2O', '게임': '게임', '기타': '기타' },
-    'en': { '선택': 'Select', '웹플랫폼': 'Web Platform', 'O2O': 'O2O', '게임': 'Game', '기타': 'Other' },
-    'zh': { '선택': '选择', '웹플랫폼': '网络平台', 'O2O': 'O2O', '게임': '游戏', '기타': '其他' }
+    'ko': { '앱': '앱', '웹플랫폼': '웹플랫폼', 'O2O': 'O2O', '게임': '게임', '기타': '기타' },
+    'en': { '앱': 'App', '웹플랫폼': 'Web Platform', 'O2O': 'O2O', '게임': 'Game', '기타': 'Other' },
+    'zh': { '앱': '应用', '웹플랫폼': '网络平台', 'O2O': 'O2O', '게임': '游戏', '기타': '其他' }
   };
   
   for (const ko of Object.keys(categoryMap['ko'])) {
@@ -272,7 +272,7 @@ async function loadProjects() {
       if (project.funding_type === 'investment') {
         badgeClass = 'badge-investment';
       } else if (project.funding_type === 'donation') {
-        badgeClass = 'badge-donation';
+        badgeClass = 'badge-revenue';
       } else if (project.funding_type === 'startup') {
         badgeClass = 'badge-startup';
       }
@@ -501,7 +501,7 @@ async function renderAdminPanel() {
               <div><label class="block text-sm font-medium mb-2">${t('category')} *</label>
               <select name="category" required class="w-full border rounded px-4 py-2">
                 <option value="">선택</option>
-                <option value="선택">선택</option>
+                <option value="앱">앱</option>
                 <option value="웹플랫폼">웹플랫폼</option>
                 <option value="O2O">O2O</option>
                 <option value="게임">게임</option>
