@@ -265,10 +265,10 @@ app.get('/', (c) => {
             <div class="max-w-7xl mx-auto px-2 sm:px-4">
                 <div class="flex flex-col items-center text-center space-y-0.5">
                     <p class="text-[10px] sm:text-xs text-gray-300 leading-relaxed">
-                        아이큐.허브(IQ.HERB) &nbsp;|&nbsp; 534-64-00747
+                        캐쉬 아이큐(CASH IQ) &nbsp;|&nbsp; 대표:박용근
                     </p>
                     <p class="text-[9px] sm:text-[11px] text-gray-400 leading-relaxed">
-                        서울특별시 광진구 뚝섬로31길 59(자양동) 대표 정천명
+                        서울특별시 강남구 테헤란로28길 15, 614호(대치동)
                     </p>
                 </div>
             </div>
