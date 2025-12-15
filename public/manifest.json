@@ -1,0 +1,9 @@
+{
+  "name": "OpenFunding IT Hub",
+  "short_name": "IT Hub",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a855f7",
+  "icons": []
+}
