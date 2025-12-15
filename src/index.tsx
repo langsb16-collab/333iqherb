@@ -13,7 +13,7 @@ app.use('/api/*', cors())
 
 // Serve static files
 app.use('/static/*', serveStatic({ 
-  root: './public',
+  root: '.',
   onNotFound: (path, c) => {
     console.log(`File not found: ${path}`)
   }
