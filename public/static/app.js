@@ -354,6 +354,8 @@ function showProjectDetail(id) {
   // Images section HTML
   let imagesHTML = '';
   if (imageUrls.length > 0) {
+    console.log('🖼️ 이미지 개수:', imageUrls.length);
+    console.log('🖼️ 첫 이미지 길이:', imageUrls[0] ? imageUrls[0].length : 0);
     imagesHTML = `
       <div class="bg-blue-50 rounded-lg p-4">
         <h3 class="text-lg font-bold mb-3 text-center">
@@ -361,8 +363,8 @@ function showProjectDetail(id) {
         </h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           ${imageUrls.map((url, index) => `
-            <div class="relative group cursor-pointer" onclick="window.open('${url}', '_blank')">
-              <img src="${url}" alt="Image ${index + 1}" class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            <div class="relative group cursor-pointer" data-image-index="${index}">
+              <img src="${url}" alt="이미지 ${index + 1}" class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow" onerror="console.error('이미지 로드 실패:', this.alt)">
               <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity rounded-lg flex items-center justify-center">
                 <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
               </div>
@@ -371,6 +373,8 @@ function showProjectDetail(id) {
         </div>
       </div>
     `;
+  } else {
+    console.log('⚠️ 이미지 없음');
   }
   
   // Videos section HTML - vertical layout for 2-5 videos
